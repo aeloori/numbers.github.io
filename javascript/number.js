@@ -4,7 +4,7 @@ document.getElementById("sub").onclick=function(){
     num=document.getElementById("det").value;
     num=Number(num);
 
-    if(num==0)
+    if(num==0 || num<0)
     {
         document.getElementById("ans").innerHTML="Enter a value above 'o' ";
     }

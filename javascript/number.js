@@ -4,72 +4,79 @@ document.getElementById("sub").onclick=function(){
     num=document.getElementById("det").value;
     num=Number(num);
 
-
-    if(document.getElementById("even").checked==true)
+    if(num==0)
     {
-        if((num%2)==0)
-        {
-            document.getElementById("ans").innerHTML="You'r answer is :"+" Yes";
-            console.log("yes")
-        }
-        else
-        {
-            document.getElementById("ans").innerHTML="You'r answer is :"+"No";
-
-        }
+        document.getElementById("ans").innerHTML="Enter a value above 'o' ";
     }
-    else if(document.getElementById("odd").checked)
+    else
     {
-        if((num%2)==0)
+        if(document.getElementById("even").checked==true)
         {
-            document.getElementById("ans").innerHTML="You'r answer is :"+" No";
-            console.log("No")
-        }
-        else
-        {
-            document.getElementById("ans").innerHTML="You'r answer is :"+"Yes";
-
-        }
-    }
-    else if(document.getElementById("prime").checked)
-    {
-        let count=0;
-        for(let i=0;i<=num;i++)
-        {
-            if(num%i==0)
+            if((num%2)==0)
             {
-                count++;
+                document.getElementById("ans").innerHTML="You'r answer is :"+" Yes";
+                console.log("yes")
+            }
+            else
+            {
+                document.getElementById("ans").innerHTML="You'r answer is :"+"No";
+    
             }
         }
-        if(count==2)
+        else if(document.getElementById("odd").checked)
         {
-            document.getElementById("ans").innerHTML="You'r answer is :"+"Yes";
-        }
-        else
-        {
-            document.getElementById("ans").innerHTML="You'r answer is :"+"No";
-        }
-    }
-    else if(document.getElementById("cons").checked)
-    {
-        let count=0;
-        for(let i=0;i<=num;i++)
-        {
-            if(num%i==0)
+            if((num%2)==0)
             {
-                count++;
+                document.getElementById("ans").innerHTML="You'r answer is :"+" No";
+                console.log("No")
+            }
+            else
+            {
+                document.getElementById("ans").innerHTML="You'r answer is :"+"Yes";
+    
             }
         }
-        if(count==2)
+        else if(document.getElementById("prime").checked)
         {
-            document.getElementById("ans").innerHTML="You'r answer is :"+"No";
+            let count=0;
+            for(let i=0;i<=num;i++)
+            {
+                if(num%i==0)
+                {
+                    count++;
+                }
+            }
+            if(count==2)
+            {
+                document.getElementById("ans").innerHTML="You'r answer is :"+"Yes";
+            }
+            else
+            {
+                document.getElementById("ans").innerHTML="You'r answer is :"+"No";
+            }
         }
-        else
+        else if(document.getElementById("cons").checked)
         {
-            document.getElementById("ans").innerHTML="You'r answer is :"+"Yes";
+            let count=0;
+            for(let i=0;i<=num;i++)
+            {
+                if(num%i==0)
+                {
+                    count++;
+                }
+            }
+            if(count==2)
+            {
+                document.getElementById("ans").innerHTML="You'r answer is :"+"No";
+            }
+            else
+            {
+                document.getElementById("ans").innerHTML="You'r answer is :"+"Yes";
+            }
+        }
+        else {
+            document.getElementById("ans").innerHTML="Please select one option to view Result";
         }
     }
-    else {
-        document.getElementById("ans").innerHTML="Please select one option to view Result";
-    }
+    
 }

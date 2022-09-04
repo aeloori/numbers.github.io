@@ -69,4 +69,7 @@ document.getElementById("sub").onclick=function(){
             document.getElementById("ans").innerHTML="You'r answer is :"+"Yes";
         }
     }
+    else {
+        document.getElementById("ans").innerHTML="Please select one option to view Result";
+    }
 }
